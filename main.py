@@ -140,14 +140,22 @@ def main():
     # Gerçek sonuç.
     real = 17.3673
     print(f'Gerçek sonuç =     {real}')
-    print(f'Sağdan dikdortgen: {sagdik(f,a, b, n)}')
-    print(f'Soldan dikdortgen: {soldik(f,a, b, n)}')
-    print(f'midpoint         : {midpoint(f,a, b, n)}')
-    print(f'Yamuklar yöntemi : {yamukkurali(f,a, b, n)}')
-    print(f'Simpson 1/3      : {simp13(f,a, b, n)}')
-    print(f'Simpson 3/8      : {simp38(f,a, b, n)}')
-    print(f'Weddle           : {weedle(f,a, b,)}')
-    print(f'Boole            : {boolerule(f,a, b)}')
+    print(
+        f'Sağdan dikdortgen: {sagdik(f,a, b, n)} Hata = {real-sagdik(f,a, b, n)}')
+    print(
+        f'Soldan dikdortgen: {soldik(f,a, b, n)} Hata = {real-soldik(f,a, b, n)}')
+    print(
+        f'midpoint         : {midpoint(f,a, b, n)} Hata = {real-midpoint(f,a, b,n)}')
+    print(
+        f'Yamuklar yöntemi : {yamukkurali(f,a, b, n)} Hata = {real-yamukkurali(f,a, b, n)}')
+    print(
+        f'Simpson 1/3      : {simp13(f,a, b, n)} Hata = {real-simp13(f,a, b, n)}')
+    print(
+        f'Simpson 3/8      : {simp38(f,a, b, n)} Hata = {real-simp38(f,a, b, n)}')
+    print(
+        f'Weddle           : {weedle(f,a, b,)} Hata = {real-weedle(f,a, b,)}')
+    print(
+        f'Boole            : {boolerule(f,a, b)} Hata = {real-boolerule(f,a, b)}')
 
 
 if __name__ == "__main__":
